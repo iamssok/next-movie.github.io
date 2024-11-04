@@ -20,3 +20,25 @@
   gap: 20px;
   margin-top: 20px;
 }
+.info div {
+  font-size: 14px;
+}
+.info div span {
+  color: #aaa;
+}
+.dot {
+  opacity: .5;
+}
+.btn {
+  width: 110px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 100px;
+  font-weight: 300;
+  text-align: center;
+  opacity: .7;
+  transition: opacity 0.2s ease-in-out;
+}
+.btn:hover {
+  opacity: 1;
+}

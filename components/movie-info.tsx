@@ -12,10 +12,14 @@ export default async function MovieInfo({id}: {id: string}) {
     <img className={styles.poster} src={movie.poster_path} alt={movie.title} />
     <div className={styles.info}>
       <h1 className={styles.title}>{movie.title}</h1>
-      <h3>⭐ {movie.vote_average.toFixed(1)}</h3>
+      <div>
+        ⭐ <span>{movie.vote_average.toFixed(1)}</span><span className={styles.dot}>ㆍ</span>
+        <span>{movie.genres.map((g) => g.name).slice(0, 1)}</span><span className={styles.dot}>ㆍ</span>
+        <span>{movie.release_date.slice(0, 4)}</span>
+      </div>
       <p>{movie.overview}</p>
-      <a href={movie.homepage} target={"_blank"}>
-          Homepage &rarr;
+      <a href={movie.homepage} target={"_blank"} className={styles.btn}>
+        view more
       </a>
     </div>
   </div>
