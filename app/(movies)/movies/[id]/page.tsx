@@ -4,23 +4,18 @@ import MovieVideos from "../../../../components/movie-videos";
 import MovieSimilar from "../../../../components/movie-similar";
 import { Metadata } from "next";
 
-interface Params {
-  id: string;
-}
-interface MovieDetailProps {
-  params: Params;
+interface IParams {
+  params: { id: string };
 }
 
-export async function generateMetadata({ params }: MovieDetailProps): Promise<Metadata> {
-  const { id } = await params;
+export async function generateMetadata({ params: { id } }: IParams) {
   const movie = await getMovie(id);
   return {
     title: movie.title,
   };
 }
 
-export default async function MovieDetail({ params }: MovieDetailProps) {
-  const { id } = await params;
+export default async function MovieDetail({ params: { id } }: IParams) {
   return (
     <div>
       <Suspense fallback={<h1>Loading Movie info</h1>}>

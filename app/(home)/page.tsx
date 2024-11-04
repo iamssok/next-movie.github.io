@@ -1,4 +1,4 @@
-import { API_URL } from "../layout";
+import { API_URL } from "../constans";
 import MovieList from "../../components/movie-list";
 import styles from "../../styles/home.module.css";
 
