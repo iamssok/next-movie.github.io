@@ -1,0 +1,22 @@
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #111;
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+.off {
+  font-weight: 300;
+}
+.on {
+  font-weight: 700;
+  color: #39bfb5;
+}
