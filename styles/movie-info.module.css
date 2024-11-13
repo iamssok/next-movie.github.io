@@ -1,13 +1,16 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
   width: 80%;
   margin: 130px auto 0;
 }
 .poster {
+  width: 35%;
+}
+.poster img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 .title {
   font-weight: 600;
@@ -18,6 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 60%;
   margin-top: 20px;
 }
 .info div {
@@ -41,4 +45,12 @@
 }
 .btn:hover {
   opacity: 1;
+}
+@media (max-width: 768px) {
+  .poster {
+    width: 100%;
+  }
+  .info {
+    width: 100%;
+  }
 }

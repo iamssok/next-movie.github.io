@@ -1,21 +1,19 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 25px;
   max-width: 90%;
   width: 100%;
   margin: 130px auto 80px;
 }
 .container div {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  place-items: center;
-  gap: 10px;
+  width: 18%;
+  text-align: center;
   cursor: pointer;
 }
 .container div img {
-  max-width: 100%;
-  min-height: 100%;
+  width: 100%;
   border-radius: 10px;
   opacity: .7;
   transition: opacity 0.3s ease-in-out;
@@ -24,5 +22,10 @@
   opacity: 1;
 }
 .container div a {
-  font-size: 14px;
+  overflow: hidden;
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
